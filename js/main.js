@@ -17,7 +17,7 @@
   const getPreferredTheme = () => {
     const saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") return saved;
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   };
   const applyTheme = (t) => {
     document.documentElement.setAttribute("data-theme", t);
