@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#f6f3ec"/>
+  <rect x="0.5" y="0.5" width="639" height="399" fill="none" stroke="#161310" stroke-opacity="0.12"/>
+  <g stroke="#161310" stroke-width="1.5" fill="none" opacity="0.55">
+    <path d="M70 100 L70 168 L92 150 L106 178 L116 173 L102 146 L128 146 Z"/>
+  </g>
+  <g stroke="#b5502f" stroke-width="1.8" fill="none" opacity="0.75">
+    <path d="M170 110 A30 30 0 1 1 150 132" stroke-linecap="round"/>
+    <polygon points="150,120 150,136 165,131" fill="#b5502f"/>
+  </g>
+  <text x="56" y="258" font-family="Georgia, 'Iowan Old Style', serif" font-size="40" fill="#161310" letter-spacing="-0.5">Web Automation</text>
+  <text x="56" y="288" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="0.08em" fill="#7a7269">SELENIUM · MULTITHREADED INGESTION</text>
+  <line x1="56" y1="308" x2="120" y2="308" stroke="#b5502f" stroke-width="2"/>
+</svg>
