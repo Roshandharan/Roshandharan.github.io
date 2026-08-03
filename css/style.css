@@ -613,6 +613,13 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
   color: var(--muted);
 }
 .marquee-item svg{ flex-shrink: 0; }
+.marquee-item--award{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 15.5px;
+  color: var(--text);
+}
+.marquee-item--award em{ font-style: italic; }
 @keyframes marquee-scroll{
   from{ transform: translateX(0); }
   to{ transform: translateX(-50%); }
