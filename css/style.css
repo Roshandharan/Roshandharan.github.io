@@ -380,9 +380,10 @@ nav{
 .media.logo{
   height: 56px;
   min-width: 56px;
-  max-width: 168px;
+  max-width: 190px;
   width: auto;
-  padding: 8px 12px;
+  padding: 0;
+  overflow: hidden;
   display: grid;
   place-items: center;
   background: var(--surface);
@@ -391,11 +392,10 @@ nav{
 }
 .media img{ width:100%; height:100%; object-fit: cover; }
 .media.logo img{
-  max-width: 144px;
-  max-height: 40px;
+  height: 56px;
   width: auto;
-  height: auto;
-  object-fit: contain;
+  max-width: 190px;
+  object-fit: cover;
 }
 
 .pills{
