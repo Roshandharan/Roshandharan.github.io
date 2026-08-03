@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
-  <rect width="640" height="400" fill="#f6f3ec"/>
-  <rect x="0.5" y="0.5" width="639" height="399" fill="none" stroke="#161310" stroke-opacity="0.12"/>
-  <polyline points="56,150 96,150 112,110 136,190 156,130 176,150 220,150" fill="none" stroke="#b5502f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.75"/>
-  <circle cx="136" cy="190" r="4" fill="#161310"/>
-  <g fill="none" stroke="#161310" stroke-opacity="0.5" stroke-width="1.4">
+  <rect width="640" height="400" fill="#ffffff"/>
+  <polyline points="56,150 96,150 112,110 136,190 156,130 176,150 220,150" fill="none" stroke="#3d5a80" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="136" cy="190" r="4" fill="#12141c"/>
+  <g fill="none" stroke="#12141c" stroke-opacity="0.45" stroke-width="1.4">
     <circle cx="300" cy="150" r="34"/>
     <circle cx="300" cy="150" r="22"/>
   </g>
-  <circle cx="300" cy="150" r="5" fill="#b5502f"/>
-  <text x="56" y="258" font-family="Georgia, 'Iowan Old Style', serif" font-size="40" fill="#161310" letter-spacing="-0.5">Hospital AI</text>
-  <text x="56" y="296" font-family="Georgia, 'Iowan Old Style', serif" font-size="40" fill="#161310" letter-spacing="-0.5">Command Center</text>
-  <text x="56" y="322" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="0.08em" fill="#7a7269">LANGGRAPH · REAL-TIME ADT RISK PIPELINE</text>
-  <line x1="56" y1="338" x2="120" y2="338" stroke="#b5502f" stroke-width="2"/>
+  <circle cx="300" cy="150" r="5" fill="#3d5a80"/>
+  <text x="56" y="228" font-family="Georgia, 'Iowan Old Style', serif" font-size="40" fill="#12141c" letter-spacing="-0.5">Hospital AI</text>
+  <text x="56" y="266" font-family="Georgia, 'Iowan Old Style', serif" font-size="40" fill="#12141c" letter-spacing="-0.5">Command Center</text>
+  <text x="56" y="296" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="0.08em" fill="#767c8e">LANGGRAPH · REAL-TIME ADT RISK PIPELINE</text>
+  <line x1="56" y1="316" x2="120" y2="316" stroke="#3d5a80" stroke-width="2"/>
 </svg>

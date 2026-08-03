@@ -14,14 +14,16 @@
 
   // ---------- Theme ----------
   const themeBtn = $("#themeToggle");
+  const readStoredTheme = () => { try { return localStorage.getItem("theme"); } catch { return null; } };
+  const writeStoredTheme = (t) => { try { localStorage.setItem("theme", t); } catch {} };
   const getPreferredTheme = () => {
-    const saved = localStorage.getItem("theme");
+    const saved = readStoredTheme();
     if (saved === "light" || saved === "dark") return saved;
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   };
   const applyTheme = (t) => {
     document.documentElement.setAttribute("data-theme", t);
-    localStorage.setItem("theme", t);
+    writeStoredTheme(t);
     if (themeBtn) themeBtn.setAttribute("aria-label", t === "light" ? "Switch to dark theme" : "Switch to light theme");
   };
   applyTheme(getPreferredTheme());
@@ -56,8 +58,12 @@
   });
 
   // ---------- Reveal on scroll ----------
+  // Content is visible by default in CSS (.reveal has no starting opacity:0);
+  // only once we know JS + IntersectionObserver are working do we opt elements
+  // into the fade-in effect, so a script error never leaves the page blank.
   const reveal = $$(".reveal");
   if ("IntersectionObserver" in window && reveal.length){
+    reveal.forEach(el => el.classList.add("pre"));
     const io = new IntersectionObserver((entries) => {
       for (const e of entries){
         if (e.isIntersecting) e.target.classList.add("in");
