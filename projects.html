@@ -84,16 +84,16 @@
 
     <div class="grid" id="projectsRoot" aria-label="Project cards">
 
-    <article class="card reveal" data-title="RAG-Powered Codebase Q&A Agent" data-meta="Python • LangChain • Claude • FastAPI • 2026 • Personal project" data-tags="Personal|Python|AI Agents|RAG" data-order="3001">
-      <button class="media project" data-modal="image" data-title="RAG-Powered Codebase Q&A Agent" data-desc="Python • LangChain • Claude • FastAPI • 2026 • Personal project" data-src="assets/rag-agent-project.svg" aria-label="Open preview for RAG-Powered Codebase Q&A Agent">
+    <article class="card reveal" data-title="RAG-Powered Codebase Q&A Agent" data-meta="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-tags="Personal|Python|AI Agents|RAG" data-order="3001">
+      <button class="media project" data-modal="image" data-title="RAG-Powered Codebase Q&A Agent" data-desc="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-src="assets/rag-agent-project.svg" aria-label="Open preview for RAG-Powered Codebase Q&A Agent">
         <img src="assets/rag-agent-project.svg" alt="RAG-Powered Codebase Q&A Agent cover" loading="lazy" />
       </button>
       <div class="tag-featured">Featured</div>
       <h3>RAG-Powered Codebase Q&A Agent</h3>
-      <div class="meta">Python • LangChain • Claude • FastAPI • 2026 • Personal project</div>
+      <div class="meta">LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project</div>
       <p style="margin-top:10px;">Point it at any public GitHub repo and ask natural-language questions about the code — answers are cited down to the exact file and chunk they were drawn from.</p>
       <ul>
-        <li>Built language-aware chunking (function/class-boundary splitting) and MMR retrieval to avoid near-duplicate context, with citation-required prompting enforced on every answer.</li><li>Cached local embeddings in front of a Chroma vector store with incremental re-ingestion and a retrieval evaluation harness; shipped with CI and a Docker Compose deployment.</li>
+        <li>Created a RAG pipeline using language-aware chunking and MMR retrieval over locally-embedded vector search, ingesting any GitHub repo — Flask's 88 files into 573 chunks in 5.8 seconds — and answering cited codebase questions.</li><li>Ran a 10-query retrieval eval, tuning MMR to raise hit-rate@k from 70% to 90%, then shipped git-diff-based incremental re-ingestion, a SQLite-backed repo registry, and size/timeout guards for production hardening.</li>
       </ul>
       <div class="cta-row" style="margin-top:12px;">
         <a class="btn" href="https://github.com/Roshandharan/rag-codebase-agent" target="_blank" rel="noopener">GitHub</a>
@@ -101,16 +101,16 @@
       </div>
     </article>
 
-    <article class="card reveal" data-title="Hospital AI Command Center" data-meta="Python • LangGraph • XGBoost • Claude • FastAPI • 2026 • Personal project" data-tags="Personal|Python|AI Agents|LangGraph" data-order="3000">
-      <button class="media project" data-modal="image" data-title="Hospital AI Command Center" data-desc="Python • LangGraph • XGBoost • Claude • FastAPI • 2026 • Personal project" data-src="assets/hospital-command-project.svg" aria-label="Open preview for Hospital AI Command Center">
+    <article class="card reveal" data-title="Hospital AI Command Center" data-meta="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-tags="Personal|Python|AI Agents|LangGraph" data-order="3000">
+      <button class="media project" data-modal="image" data-title="Hospital AI Command Center" data-desc="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-src="assets/hospital-command-project.svg" aria-label="Open preview for Hospital AI Command Center">
         <img src="assets/hospital-command-project.svg" alt="Hospital AI Command Center cover" loading="lazy" />
       </button>
       <div class="tag-featured">Featured</div>
       <h3>Hospital AI Command Center</h3>
-      <div class="meta">Python • LangGraph • XGBoost • Claude • FastAPI • 2026 • Personal project</div>
+      <div class="meta">LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project</div>
       <p style="margin-top:10px;">Real-time multi-agent system that fires on every HL7 ADT event — scoring patient risk, retrieving clinical guidelines, and synthesizing an intervention plan the instant the moment for action exists, instead of a dashboard someone checks later.</p>
       <ul>
-        <li>8-node LangGraph pipeline runs XGBoost risk scoring across 5 clinical dimensions with SHAP explainability, then retrieves relevant CMS/HEDIS guidance from a ChromaDB knowledge base.</li><li>Claude synthesizes a JSON intervention plan routed to specific roles via SSE push to a live dashboard, with full accountability logging on whether anyone acted on it.</li>
+        <li>Deployed a real-time multi-agent system (LangGraph StateGraph, conditional routing) firing on every ADT event, running five XGBoost risk classifiers with SHAP explainability at 0.77–0.83 validation AUC.</li><li>Built a Claude-powered intervention agent that synthesizes five risk scores and a ChromaDB RAG layer over 10 CMS/HEDIS documents into structured JSON action plans with named assignees, logged to PostgreSQL and broadcast live via SSE with Accept/Override/Escalate attribution.</li>
       </ul>
       <div class="cta-row" style="margin-top:12px;">
         <a class="btn" href="https://github.com/Roshandharan/hospital-ai-command-center" target="_blank" rel="noopener">GitHub</a>

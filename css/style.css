@@ -548,3 +548,75 @@ kbd{
 
 button.media{ padding:0; cursor:pointer; color:inherit; background:none; border:1px solid var(--border); }
 button.media:focus{ outline:none; box-shadow: var(--focus); }
+
+/* ---------- Technical Skills list ---------- */
+.skills-list{ border-top: 1px solid var(--border); }
+.skills-row{
+  display:flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.skills-label{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 190px;
+  flex-shrink: 0;
+  color: var(--text);
+}
+.skills-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+  min-width: 240px;
+}
+.tag{
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------- Auto-scrolling skill marquee ---------- */
+.marquee-section{
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+}
+.marquee{
+  overflow: hidden;
+  position: relative;
+  padding: 26px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+.marquee-track{
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+}
+.marquee:hover .marquee-track{ animation-play-state: paused; }
+.marquee-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.marquee-item svg{ flex-shrink: 0; }
+@keyframes marquee-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{ animation: none; }
+}
