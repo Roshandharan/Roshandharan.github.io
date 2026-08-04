@@ -753,13 +753,24 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
   color: var(--muted2);
   padding: 0 20px;
   border-left: 1px solid var(--border);
+  transition: color .2s ease;
 }
 .marquee-icon{
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
-  opacity: .92;
+  filter: grayscale(1) contrast(0.8) brightness(0.75);
+  opacity: .68;
+  transition: filter .25s ease, opacity .25s ease, transform .25s ease;
 }
+.marquee-item:hover .marquee-icon{
+  filter: none;
+  opacity: 1;
+  transform: scale(1.12);
+}
+[data-theme="dark"] .marquee-icon{ filter: grayscale(1) contrast(0.8) brightness(1.6); }
+[data-theme="dark"] .marquee-item:hover .marquee-icon{ filter: none; }
+.marquee-item:hover{ color: var(--text); }
 .marquee-item--award{
   font-family: var(--serif);
   font-style: italic;
