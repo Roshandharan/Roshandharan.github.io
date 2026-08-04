@@ -221,6 +221,42 @@ nav{
   font-style: italic;
 }
 .accent{ color: var(--accent); }
+
+.now-line{
+  display:flex;
+  align-items:center;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 13.5px;
+  color: var(--muted);
+  width: fit-content;
+  max-width: 100%;
+}
+.now-pulse{
+  position: relative;
+  width: 7px; height: 7px;
+  border-radius: 999px;
+  background: #4a9d6e;
+  flex-shrink: 0;
+}
+.now-pulse::after{
+  content:"";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 1px solid #4a9d6e;
+  animation: now-pulse-ring 2.2s ease-out infinite;
+}
+@keyframes now-pulse-ring{
+  0%{ transform: scale(.4); opacity: .9; }
+  100%{ transform: scale(1.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce){
+  .now-pulse::after{ animation: none; }
+}
 .badges{
   display:flex;
   flex-wrap: wrap;
@@ -372,6 +408,8 @@ nav{
 }
 
 .media{
+  display: block;
+  width: 100%;
   border: 1px solid var(--border);
   background: var(--surface);
   overflow:hidden;
@@ -627,3 +665,32 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
 @media (prefers-reduced-motion: reduce){
   .marquee-track{ animation: none; }
 }
+
+/* ---------- Closing CTA ---------- */
+.closing-cta{ border-bottom: none; }
+.closing-cta-inner{
+  border: 1px solid var(--border);
+  background: var(--paper);
+  padding: 44px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.closing-cta-inner h2{ margin-bottom: 6px; }
+.closing-cta-inner p{ margin: 0; max-width: 48ch; }
+.closing-cta-inner .cta-row{ margin-top: 0; flex-shrink: 0; }
+
+/* ---------- Architecture diagram ---------- */
+.diagram{
+  clear: both;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  padding: 10px;
+  margin-top: 14px;
+}
+.diagram img, .diagram svg{ width: 100%; height: auto; display: block; }
+[data-theme="dark"] .diagram img{ filter: invert(0.92) hue-rotate(180deg); }
+
+.marquee-item--award svg path{ fill: var(--accent); }

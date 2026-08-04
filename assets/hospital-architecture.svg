@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 184" font-family="Helvetica, Arial, sans-serif">
+<rect width="1000" height="184" fill="none"/>
+<rect x="24.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="92.5" y="102.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">HL7 ADT Event</text>
+<text x="92.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">A01 / A02 / A03 / A08</text>
+<line x1="164.0" y1="102.0" x2="181.0" y2="102.0" stroke="#3d5a80" stroke-width="1.6" opacity="0.75"/>
+<polygon points="181.0,98.0 187.0,102.0 181.0,106.0" fill="#3d5a80" opacity="0.75"/>
+<rect x="187.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="255.5" y="102.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">FastAPI Ingest</text>
+<text x="255.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">Pydantic validation</text>
+<line x1="327.0" y1="102.0" x2="344.0" y2="102.0" stroke="#3d5a80" stroke-width="1.6" opacity="0.75"/>
+<polygon points="344.0,98.0 350.0,102.0 344.0,106.0" fill="#3d5a80" opacity="0.75"/>
+<rect x="350.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="418.5" y="102.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">LangGraph</text>
+<text x="418.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">8-node StateGraph</text>
+<line x1="490.0" y1="102.0" x2="507.0" y2="102.0" stroke="#3d5a80" stroke-width="1.6" opacity="0.75"/>
+<polygon points="507.0,98.0 513.0,102.0 507.0,106.0" fill="#3d5a80" opacity="0.75"/>
+<rect x="513.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="581.5" y="96.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">XGBoost x5</text>
+<text x="581.5" y="112.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">+ SHAP</text>
+<text x="581.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">0.77–0.83 AUC</text>
+<line x1="653.0" y1="102.0" x2="670.0" y2="102.0" stroke="#3d5a80" stroke-width="1.6" opacity="0.75"/>
+<polygon points="670.0,98.0 676.0,102.0 670.0,106.0" fill="#3d5a80" opacity="0.75"/>
+<rect x="676.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="744.5" y="96.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">Claude +</text>
+<text x="744.5" y="112.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">ChromaDB RAG</text>
+<text x="744.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">CMS/HEDIS guidance</text>
+<line x1="816.0" y1="102.0" x2="833.0" y2="102.0" stroke="#3d5a80" stroke-width="1.6" opacity="0.75"/>
+<polygon points="833.0,98.0 839.0,102.0 833.0,106.0" fill="#3d5a80" opacity="0.75"/>
+<rect x="839.0" y="70" width="137.0" height="64" fill="none" stroke="#12141c" stroke-width="1.3" stroke-opacity="0.55"/>
+<text x="907.5" y="102.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#12141c">Live Dashboard</text>
+<text x="907.5" y="154" text-anchor="middle" font-size="10.5" fill="#767c8e" letter-spacing="0.01em">SSE + accountability log</text>
+</svg>

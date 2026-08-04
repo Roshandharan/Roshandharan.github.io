@@ -203,11 +203,10 @@
     toastTimer = setTimeout(() => toastEl.classList.remove("show"), 1600);
   }
 
-  // ---------- Copy email button (if present) ----------
-  const copyEmail = $("#copyEmail");
-  if (copyEmail){
-    copyEmail.addEventListener("click", async () => {
-      const email = copyEmail.getAttribute("data-email") || "";
+  // ---------- Copy email button(s) (if present) ----------
+  $$("#copyEmail, #copyEmailFooter, .copy-email-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const email = btn.getAttribute("data-email") || "";
       if (!email) return;
       try{
         await navigator.clipboard.writeText(email);
@@ -216,5 +215,37 @@
         toast("Copy failed");
       }
     });
+  });
+
+  // ---------- Animated stat counters ----------
+  const counters = $$(".num[data-count]");
+  if (counters.length && "IntersectionObserver" in window){
+    const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const animateCount = (el) => {
+      const target = parseInt(el.getAttribute("data-count"), 10);
+      if (Number.isNaN(target)) return;
+      if (prefersReducedMotion){
+        el.textContent = target;
+        return;
+      }
+      const duration = 900;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const countIo = new IntersectionObserver((entries, obs) => {
+      for (const e of entries){
+        if (e.isIntersecting){
+          animateCount(e.target);
+          obs.unobserve(e.target);
+        }
+      }
+    }, { threshold: .4 });
+    counters.forEach(el => countIo.observe(el));
   }
 })();

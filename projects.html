@@ -15,10 +15,10 @@
 <meta property="og:title" content="Projects | Roshan Dharan" />
 <meta property="og:description" content="Projects portfolio — filtering and search enabled." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/og-image.png" />
+<meta property="og:image" content="assets/og-projects.png" />
 <meta property="og:url" content="https://roshandharan.github.io/projects.html" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="stylesheet" href="css/style.css?v=1785784890" />
+<link rel="stylesheet" href="css/style.css?v=1785801979" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Roshan Dharan Shashidharan", "url": "https://roshandharan.github.io/projects.html", "sameAs": ["https://www.linkedin.com/in/roshan-dharan", "https://github.com/Roshandharan"], "jobTitle": "Healthcare Software Engineer", "affiliation": [{"@type": "Organization", "name": "University of Southern California"}]}</script>
 
 </head>
@@ -84,8 +84,8 @@
 
     <div class="grid" id="projectsRoot" aria-label="Project cards">
 
-    <article class="card reveal" data-title="RAG-Powered Codebase Q&A Agent" data-meta="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-tags="Personal|Python|AI Agents|RAG" data-order="3001">
-      <button class="media project" data-modal="image" data-title="RAG-Powered Codebase Q&A Agent" data-desc="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-src="assets/rag-agent-project.svg" aria-label="Open preview for RAG-Powered Codebase Q&A Agent">
+    <article class="card reveal" style="grid-column: 1 / -1;" data-title="RAG-Powered Codebase Q&A Agent" data-meta="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-tags="Personal|Python|AI Agents|RAG" data-order="3001">
+      <button class="media project" style="max-width:400px;float:left;margin:0 24px 16px 0;" data-modal="image" data-title="RAG-Powered Codebase Q&A Agent" data-desc="LangChain • ChromaDB • sentence-transformers • Feb 2026 – Apr 2026 • Personal project" data-src="assets/rag-agent-project.svg" aria-label="Open preview for RAG-Powered Codebase Q&A Agent">
         <img src="assets/rag-agent-project.svg" alt="RAG-Powered Codebase Q&A Agent cover" loading="lazy" />
       </button>
       <div class="tag-featured">Featured</div>
@@ -95,14 +95,15 @@
       <ul>
         <li>Created a RAG pipeline using language-aware chunking and MMR retrieval over locally-embedded vector search, ingesting any GitHub repo — Flask's 88 files into 573 chunks in 5.8 seconds — and answering cited codebase questions.</li><li>Ran a 10-query retrieval eval, tuning MMR to raise hit-rate@k from 70% to 90%, then shipped git-diff-based incremental re-ingestion, a SQLite-backed repo registry, and size/timeout guards for production hardening.</li>
       </ul>
+      <div class="diagram"><img src="assets/rag-agent-architecture.svg" alt="RAG agent architecture: GitHub repo to language-aware chunking to embedding cache to Chroma vector store to MMR retrieval to Claude cited answer" loading="lazy" /></div>
       <div class="cta-row" style="margin-top:12px;">
         <a class="btn" href="https://github.com/Roshandharan/rag-codebase-agent" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://rag-codebase-agent-ui.onrender.com" target="_blank" rel="noopener">Live demo</a>
       </div>
     </article>
 
-    <article class="card reveal" data-title="Hospital AI Command Center" data-meta="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-tags="Personal|Python|AI Agents|LangGraph" data-order="3000">
-      <button class="media project" data-modal="image" data-title="Hospital AI Command Center" data-desc="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-src="assets/hospital-command-project.svg" aria-label="Open preview for Hospital AI Command Center">
+    <article class="card reveal" style="grid-column: 1 / -1;" data-title="Hospital AI Command Center" data-meta="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-tags="Personal|Python|AI Agents|LangGraph" data-order="3000">
+      <button class="media project" style="max-width:400px;float:left;margin:0 24px 16px 0;" data-modal="image" data-title="Hospital AI Command Center" data-desc="LangGraph • XGBoost • SHAP • ChromaDB • Claude • FastAPI • Mar 2026 – Jul 2026 • Personal project" data-src="assets/hospital-command-project.svg" aria-label="Open preview for Hospital AI Command Center">
         <img src="assets/hospital-command-project.svg" alt="Hospital AI Command Center cover" loading="lazy" />
       </button>
       <div class="tag-featured">Featured</div>
@@ -112,6 +113,7 @@
       <ul>
         <li>Deployed a real-time multi-agent system (LangGraph StateGraph, conditional routing) firing on every ADT event, running five XGBoost risk classifiers with SHAP explainability at 0.77–0.83 validation AUC.</li><li>Built a Claude-powered intervention agent that synthesizes five risk scores and a ChromaDB RAG layer over 10 CMS/HEDIS documents into structured JSON action plans with named assignees, logged to PostgreSQL and broadcast live via SSE with Accept/Override/Escalate attribution.</li>
       </ul>
+      <div class="diagram"><img src="assets/hospital-architecture.svg" alt="Hospital AI Command Center architecture: HL7 ADT event to FastAPI ingest to LangGraph 8-node pipeline to XGBoost and SHAP to Claude and ChromaDB RAG to live dashboard via SSE" loading="lazy" /></div>
       <div class="cta-row" style="margin-top:12px;">
         <a class="btn" href="https://github.com/Roshandharan/hospital-ai-command-center" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://hospital-ai-command-center-production.up.railway.app/dashboard" target="_blank" rel="noopener">Live demo</a>
@@ -268,7 +270,7 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js?v=1785784890"></script>
+<script src="js/main.js?v=1785785575"></script>
 
 </body>
 </html>
