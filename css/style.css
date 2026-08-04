@@ -184,7 +184,7 @@ nav{
 }
 
 .hero{
-  padding: 104px 0 68px;
+  padding: 104px 0 36px;
 }
 .hero-grid{
   display:grid;
@@ -745,14 +745,14 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
 /* ---------- Highlights (static) ---------- */
 .highlights-band{
   border-bottom: 1px solid var(--border);
-  padding: 40px 0 52px;
+  padding: 18px 0 52px;
 }
 .highlights-row{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.pill{
+.highlights-row .pill{
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -764,14 +764,18 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
   font-size: 13.5px;
   font-weight: 500;
   white-space: nowrap;
-  transition: transform .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease;
+  box-shadow: 0 0 9px rgba(61,90,128,.28);
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
 }
-.pill:hover{
+[data-theme="dark"] .highlights-row .pill{ box-shadow: 0 0 10px rgba(123,163,204,.32); }
+.highlights-row .pill:hover{
   transform: translateY(-2px);
   border-color: var(--border-strong);
   background: var(--paper);
   color: var(--text);
+  box-shadow: 0 0 15px rgba(61,90,128,.48);
 }
+[data-theme="dark"] .highlights-row .pill:hover{ box-shadow: 0 0 16px rgba(123,163,204,.5); }
 .pill-icon{
   width: 14px;
   height: 14px;
@@ -781,11 +785,11 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
   transition: filter .2s ease, opacity .2s ease;
 }
 [data-theme="dark"] .pill-icon{ filter: grayscale(1) contrast(0.8) brightness(1.6) drop-shadow(0 0 4px rgba(123,163,204,.55)); }
-.pill:hover .pill-icon{ filter: drop-shadow(0 0 6px rgba(61,90,128,.65)); opacity: 1; }
-[data-theme="dark"] .pill:hover .pill-icon{ filter: drop-shadow(0 0 7px rgba(123,163,204,.75)); }
+.highlights-row .pill:hover .pill-icon{ filter: drop-shadow(0 0 6px rgba(61,90,128,.65)); opacity: 1; }
+[data-theme="dark"] .highlights-row .pill:hover .pill-icon{ filter: drop-shadow(0 0 7px rgba(123,163,204,.75)); }
 @media (prefers-reduced-motion: reduce){
-  .pill{ transition: border-color .2s ease, background-color .2s ease, color .2s ease; }
-  .pill:hover{ transform: none; }
+  .highlights-row .pill{ transition: border-color .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease; }
+  .highlights-row .pill:hover{ transform: none; }
 }
 
 /* ---------- Closing CTA ---------- */
