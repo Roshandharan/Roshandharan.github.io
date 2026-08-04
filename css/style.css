@@ -432,7 +432,7 @@ nav{
   background: var(--accent);
 }
 
-.spotlight-section{ padding-bottom: 8px; }
+.spotlight-section{ padding-top: 8px; padding-bottom: 8px; }
 .spotlight-card{
   display: flex;
   gap: 36px;
@@ -488,7 +488,7 @@ nav{
   flex-direction: column;
   justify-content: center;
 }
-.spotlight-content h2{ margin: 10px 0 6px; }
+.spotlight-content h3{ margin: 10px 0 6px; font-size: 28px; }
 .spotlight-content .meta{ margin-bottom: 6px; }
 @media (max-width: 760px){
   .spotlight-card{ flex-direction: column; }
