@@ -341,6 +341,26 @@ nav{
 }
 .stat .label{ color: var(--muted2); font-size: 12.5px; margin-top: 4px; }
 
+.profile-impact{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 16px;
+  margin-top: -1px;
+}
+.impact-num{
+  font-family: var(--serif);
+  font-weight: 620;
+  letter-spacing:-.01em;
+  font-size: 32px;
+  color: var(--accent);
+}
+.impact-label{
+  color: var(--muted2);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
 .section{
   padding: 52px 0;
   border-bottom: 1px solid var(--border);
