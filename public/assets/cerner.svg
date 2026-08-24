@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 95">
   <rect width="300" height="95" rx="8" fill="#fbfbfa"/>
-  <text x="0" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" letter-spacing="1" fill="#C74634">ORACLE</text>
-  <text x="0" y="82" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" fill="#322E2B">Cerner</text>
+  <g transform="translate(3,6) scale(0.3448)"><g transform="translate(0,0)"><ellipse cx="41" cy="50" rx="29" ry="37" fill="none" stroke="#C74634" stroke-width="24"/></g>
+<g transform="translate(98,0)"><line x1="12.00" y1="0.00" x2="12.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><path d="M 12.89,18.53 A 26.00,25.00 0 1,1 16.70,39.34" fill="none" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><line x1="30.00" y1="44.00" x2="66.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/></g>
+<g transform="translate(194,0)"><line x1="40.00" y1="0.00" x2="2.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter"/><line x1="40.00" y1="0.00" x2="78.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter"/><line x1="17.00" y1="60.00" x2="63.00" y2="60.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/></g>
+<g transform="translate(290,0)"><path d="M 64.76,71.22 A 29.00,37.00 0 1,1 64.76,28.78" fill="none" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/></g>
+<g transform="translate(388,0)"><line x1="12.00" y1="0.00" x2="12.00" y2="84.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><line x1="12.00" y1="84.00" x2="62.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/></g>
+<g transform="translate(470,0)"><line x1="12.00" y1="0.00" x2="12.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><line x1="12.00" y1="0.00" x2="70.00" y2="0.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><line x1="12.00" y1="50.00" x2="56.00" y2="50.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/><line x1="12.00" y1="100.00" x2="70.00" y2="100.00" stroke="#C74634" stroke-width="24" stroke-linecap="butt"/></g></g>
+  <text x="2" y="82" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" fill="#322E2B">Cerner</text>
 </svg>
