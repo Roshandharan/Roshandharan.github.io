@@ -31,7 +31,7 @@ export default function Certifications() {
             <article className="card reveal">
               <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
                 <div className="media logo">
-                  <img src="/assets/itil.png" alt="ITIL® Foundation logo" loading="lazy" />
+                  <img src="/assets/itil.svg" alt="ITIL® Foundation logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>ITIL® Foundation</h3>
@@ -47,7 +47,7 @@ export default function Certifications() {
             <article className="card reveal">
               <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
                 <div className="media logo">
-                  <img src="/assets/cerner.png" alt="Cerner Learning Services logo" loading="lazy" />
+                  <img src="/assets/cerner.svg" alt="Cerner Learning Services logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>Cerner Millennium: Fundamentals</h3>

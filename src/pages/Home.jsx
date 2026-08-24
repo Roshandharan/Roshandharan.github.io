@@ -156,7 +156,7 @@ export default function Home() {
             <article className="card reveal">
               <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
                 <div className="media logo">
-                  <img src="/assets/usc.png" alt="University of Southern California logo" loading="lazy" />
+                  <img src="/assets/usc.svg" alt="University of Southern California logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>University of Southern California</h3>
@@ -175,7 +175,7 @@ export default function Home() {
             <article className="card reveal">
               <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
                 <div className="media logo">
-                  <img src="/assets/reva.png" alt="REVA University logo" loading="lazy" />
+                  <img src="/assets/reva.svg" alt="REVA University logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>REVA University</h3>

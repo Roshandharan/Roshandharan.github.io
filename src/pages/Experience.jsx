@@ -34,7 +34,7 @@ export default function Experience() {
             <article className="card reveal">
               <div className="timeline-head">
                 <div className="media logo">
-                  <img src="/assets/keck.png" alt="Keck School of Medicine of USC logo" loading="lazy" />
+                  <img src="/assets/keck.svg" alt="Keck School of Medicine of USC logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>Keck School of Medicine of USC</h3>
@@ -64,7 +64,7 @@ export default function Experience() {
             <article className="card reveal">
               <div className="timeline-head">
                 <div className="media logo">
-                  <img src="/assets/oracle.png" alt="Oracle Health logo" loading="lazy" />
+                  <img src="/assets/oracle.svg" alt="Oracle Health logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>Oracle Health</h3>
@@ -97,7 +97,7 @@ export default function Experience() {
             <article className="card reveal">
               <div className="timeline-head">
                 <div className="media logo">
-                  <img src="/assets/cerner.png" alt="Oracle Cerner logo" loading="lazy" />
+                  <img src="/assets/cerner.svg" alt="Oracle Cerner logo" loading="lazy" />
                 </div>
                 <div>
                   <h3>Oracle Cerner</h3>
