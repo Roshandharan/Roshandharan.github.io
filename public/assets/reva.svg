@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <g stroke="#F7941D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M16 8v6M16 8l-3.2 3.2"/>
-    <path d="M24 16h-6M24 16l-3.2-3.2"/>
-    <path d="M16 24v-6M16 24l3.2-3.2"/>
-    <path d="M8 16h6M8 16l3.2 3.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 95">
+  <rect width="300" height="95" rx="8" fill="#fbfbfa"/>
+  <g transform="translate(6,20)" stroke="#FF6600" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M27 2v13M27 2l-8 8"/>
+    <path d="M52 27h-13M52 27l-8-8"/>
+    <path d="M27 52v-13M27 52l8-8"/>
+    <path d="M2 27h13M2 27l8 8"/>
   </g>
+  <text x="70" y="33" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#FF6600">REVA</text>
+  <text x="70" y="57" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="19" letter-spacing="0.5" fill="#2D3743">UNIVERSITY</text>
+  <text x="70" y="76" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#6b7280">Bengaluru, India</text>
 </svg>

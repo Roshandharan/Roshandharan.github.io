@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <path d="M16 4.2l9 3v7.6c0 6-4 10-9 13-5-3-9-7-9-13V7.2z" fill="none" stroke="#990000" stroke-width="1.6" stroke-linejoin="round"/>
-  <path d="M11 14.5h10M11 18.5h10" stroke="#FFC72C" stroke-width="1.6" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100">
+  <rect x="0" y="0" width="240" height="100" rx="6" fill="#990000"/>
+  <g transform="translate(18,20)" fill="none" stroke="#FFCC00" stroke-width="2">
+    <path d="M28 0l28 9v22c0 18-12 30-28 39-16-9-28-21-28-39V9z"/>
+    <path d="M8 27h40M8 35h40"/>
+  </g>
+  <text x="86" y="66" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="46" fill="#FFCC00">USC</text>
 </svg>
