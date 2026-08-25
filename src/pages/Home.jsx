@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="reveal">
             <div className="kicker">
-              <span className="dot" aria-hidden="true"></span> Healthcare Software Engineer • MS CS (Data Science) @
+              <span className="dot" aria-hidden="true"></span> Healthcare Software Engineer • MS CS @
               USC
             </div>
             <h1 style={{ marginTop: '18px' }}>
@@ -163,7 +163,7 @@ export default function Home() {
                 <div>
                   <h3>University of Southern California</h3>
                   <div className="meta">
-                    Master of Science in Computer Science (Data Science) • GPA: 3.67/4 • Aug 2025 – May 2027 • Los
+                    Master of Science in Computer Science • GPA: 3.67/4 • Aug 2025 – May 2027 • Los
                     Angeles, CA
                   </div>
                 </div>
