@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import StatCounter from '../components/StatCounter.jsx';
 import CopyEmailButton from '../components/CopyEmailButton.jsx';
+import FlowLines from '../components/FlowLines.jsx';
 
 const EMAIL = 'roshandharan.shashidharan@usc.edu';
 
@@ -15,6 +16,7 @@ export default function Home() {
       />
 
       <section className="hero">
+        <FlowLines className="hero-flow" />
         <div className="container hero-grid">
           <div className="reveal">
             <div className="kicker">

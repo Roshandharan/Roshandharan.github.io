@@ -186,8 +186,37 @@ nav{
 
 .hero{
   padding: 104px 0 36px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-flow{
+  /* top/bottom are both literal 0, not percentages: .hero has no
+     explicit height (it's auto, sized by its content), and percentage
+     top/bottom on an absolutely positioned child of an auto-height
+     container don't resolve reliably -- they were silently ignored
+     here, which is its own lesson. Cover the full hero and instead
+     keep the strands themselves confined to the bottom portion of
+     FlowLines' own viewBox (see STRANDS in the component) so the
+     photo-safe margin scales proportionally with the container's
+     actual height instead of depending on a CSS percentage that
+     doesn't work in this context. */
+  position: absolute;
+  inset: 0 -60px 0 28%;
+  z-index: 0;
+  opacity: .4;
+  pointer-events: none;
+}
+@media (max-width: 920px){
+  /* Below this width .hero-grid stacks to one column and the hero becomes
+     much taller than it is wide. "slice" fit on the wide/short viewBox
+     would then zoom in drastically to cover that tall box, blowing the
+     artwork up into one oversized near-straight line instead of the
+     intended fan -- simplest fix is to not show it there. */
+  .hero-flow{ display: none; }
 }
 .hero-grid{
+  position: relative;
+  z-index: 1;
   display:grid;
   grid-template-columns: minmax(0,1.35fr) minmax(0,.65fr);
   gap: 72px;
