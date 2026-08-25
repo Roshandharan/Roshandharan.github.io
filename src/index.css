@@ -209,14 +209,6 @@ nav{
   z-index: 0;
   pointer-events: none;
 }
-@media (max-width: 920px){
-  /* Below this width .hero-grid stacks to one column and the hero becomes
-     much taller than it is wide. "slice" fit on the wide/short viewBox
-     would then zoom in drastically to cover that tall box, blowing the
-     artwork up into one oversized near-straight line instead of the
-     intended fan -- simplest fix is to not show it there. */
-  .hero-flow{ display: none; }
-}
 .hero-grid{
   position: relative;
   z-index: 1;
