@@ -406,9 +406,21 @@ export default function FlowLines({ className }) {
             pacing the dot "raced" through the flatter stretches.
             keyPoints are fractions of total path length by spec, so
             pairing them linearly with keyTimes is the standard fix for
-            even, gliding motion regardless of how the curve bends. */}
+            even, gliding motion regardless of how the curve bends.
+
+            The paths aren't closed loops, so repeatCount="indefinite"
+            means the dot instantly teleports from the end back to the
+            start every cycle -- measured at ~490px in a single frame.
+            That's the actual "handbrake" jolt: constant-speed gliding
+            that then snaps across the whole canvas and restarts. Fixed
+            by fading opacity 0→1→1→0 on the exact same begin/dur, so
+            the teleport happens while the dot is invisible -- it now
+            reads as a pulse fading in, gliding, and fading out, then a
+            new one appearing at the start, rather than a visible jump.
+            Base opacity is 0 so it stays hidden before its first cycle
+            begins too. */}
         {allStrands.map((s) => (
-          <circle key={`glow-${s.id}`} r="1.4" fill={GLOW_COLOR} opacity="1" filter="url(#flowGlowBlur)" className="flow-glow">
+          <circle key={`glow-${s.id}`} r="1.4" fill={GLOW_COLOR} opacity="0" filter="url(#flowGlowBlur)" className="flow-glow">
             <animateMotion
               dur={`${s.pulseDur}s`}
               begin={`${s.pulseBegin}s`}
@@ -419,6 +431,15 @@ export default function FlowLines({ className }) {
             >
               <mpath href={`#flow-path-${s.id}`} xlinkHref={`#flow-path-${s.id}`} />
             </animateMotion>
+            <animate
+              attributeName="opacity"
+              values="0;1;1;0"
+              keyTimes="0;0.12;0.88;1"
+              calcMode="linear"
+              dur={`${s.pulseDur}s`}
+              begin={`${s.pulseBegin}s`}
+              repeatCount="indefinite"
+            />
           </circle>
         ))}
       </g>
