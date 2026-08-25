@@ -190,20 +190,23 @@ nav{
   overflow: hidden;
 }
 .hero-flow{
-  /* top/bottom are both literal 0, not percentages: .hero has no
-     explicit height (it's auto, sized by its content), and percentage
-     top/bottom on an absolutely positioned child of an auto-height
-     container don't resolve reliably -- they were silently ignored
-     here, which is its own lesson. Cover the full hero and instead
-     keep the strands themselves confined to the bottom portion of
-     FlowLines' own viewBox (see STRANDS in the component) so the
-     photo-safe margin scales proportionally with the container's
-     actual height instead of depending on a CSS percentage that
-     doesn't work in this context. */
+  /* Covers the entire hero (all four insets literal 0 -- .hero's WIDTH
+     is always definite so that was never the issue; its HEIGHT is auto/
+     content-sized, which is why top/bottom must stay literal 0 rather
+     than a percentage: percentage top/bottom on an absolutely
+     positioned child of an auto-height container don't resolve
+     reliably, as an earlier version of this rule discovered the hard
+     way). Legibility over the foreground text now comes from the
+     component's own SVG mask (see TEXT_ZONES in FlowLines.jsx), not
+     from confining the graphic to one region -- it needs to actually
+     span the whole section. */
+  /* No opacity here: it used to dim the whole SVG uniformly, which also
+     crushed the traveling glow dots down to near-invisible along with
+     the ambient lines. The line-dimming now lives on an inner <g> in
+     FlowLines.jsx instead, so the glow can render at full strength. */
   position: absolute;
-  inset: 0 -60px 0 28%;
+  inset: 0;
   z-index: 0;
-  opacity: .4;
   pointer-events: none;
 }
 @media (max-width: 920px){
