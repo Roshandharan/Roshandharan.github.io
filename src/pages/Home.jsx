@@ -49,8 +49,8 @@ export default function Home() {
       <section className="section selected-work"><div className="container">
         <div className="section-head reveal"><div><span className="section-index">01 · Selected work</span><h2>Systems, not demos.</h2><p>Projects built around retrieval quality, observable decisions, and production-minded safeguards.</p></div><Link className="text-link" to="/projects">Explore all projects <span aria-hidden="true">→</span></Link></div>
         <div className="case-study-list">
-          {selectedWork.map((project, index) => <article className="case-study reveal" key={project.title}>
-            <div className="case-study-media"><img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'} /></div>
+          {selectedWork.map((project) => <article className="case-study reveal" key={project.title}>
+            <div className="case-study-media"><img src={project.image} alt={project.alt} loading="lazy" decoding="async" /></div>
             <div className="case-study-copy"><span className="eyebrow">{project.eyebrow}</span><h3>{project.title}</h3><p>{project.summary}</p>
               <div className="case-study-facts"><span><b>Result</b>{project.metric}</span><span><b>Stack</b>{project.stack}</span></div>
               <a className="text-link" href={project.href} target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
