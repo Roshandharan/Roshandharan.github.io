@@ -9,6 +9,7 @@ const SITE_URL = 'https://roshandharan.github.io';
  */
 export default function Seo({ title, description, path, ogImage = '/assets/og-image.png' }) {
   const canonical = `${SITE_URL}${path}`;
+  const socialImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
 
   const personLd = {
     '@context': 'https://schema.org',
@@ -28,7 +29,7 @@ export default function Seo({ title, description, path, ogImage = '/assets/og-im
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={socialImage} />
       <meta property="og:url" content={canonical} />
       <meta name="twitter:card" content="summary_large_image" />
       <script type="application/ld+json">{JSON.stringify(personLd)}</script>

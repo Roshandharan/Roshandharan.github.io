@@ -1,434 +1,84 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
-import StatCounter from '../components/StatCounter.jsx';
 import CopyEmailButton from '../components/CopyEmailButton.jsx';
 import FlowLines from '../components/FlowLines.jsx';
 
 const EMAIL = 'roshandharan.shashidharan@usc.edu';
+const selectedWork = [
+  { eyebrow: 'Agentic healthcare systems', title: 'Hospital AI Command Center', image: '/assets/hospital-command-project.svg', alt: 'Hospital AI Command Center interface and system overview', summary: 'A real-time multi-agent workflow that reacts to HL7 ADT events, scores clinical risk, retrieves guidelines, and produces attributable intervention plans.', metric: '5 models · 0.77–0.83 AUC', stack: 'LangGraph · XGBoost · Claude · FastAPI', href: 'https://github.com/Roshandharan/hospital-ai-command-center' },
+  { eyebrow: 'Retrieval and developer tooling', title: 'RAG Codebase Q&A Agent', image: '/assets/rag-agent-project.svg', alt: 'RAG Codebase Q and A agent interface', summary: 'Ingests a public GitHub repository and answers natural-language questions with citations to the exact source chunks used for retrieval.', metric: '90% hit-rate@k', stack: 'LangChain · ChromaDB · Python', href: 'https://github.com/Roshandharan/rag-codebase-agent' },
+  { eyebrow: 'Clinical machine learning', title: 'ICU Outcome Prediction', image: '/assets/icu-project-cover.svg', alt: 'ICU outcome prediction project overview', summary: 'A multimodal prediction pipeline combining longitudinal vitals with BioClinicalBERT representations of clinical notes.', metric: '6–8% AUROC lift', stack: 'PyTorch · BioClinicalBERT · Streamlit', href: '/projects', internal: true },
+];
 
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Roshan Dharan | Portfolio"
-        description="Portfolio of Roshan Dharan Shashidharan — experience, projects, publications, certifications, awards, and resume."
-        path="/"
-      />
+      <Seo title="Roshan Dharan | Backend & AI Engineer" description="Backend and AI engineer building reliable healthcare systems. USC MS CS, Keck Medicine of USC, and former Oracle Health engineer." path="/" />
 
-      <section className="hero">
+      <section className="hero hero-redesign">
         <FlowLines className="hero-flow" />
-        <div className="container hero-grid">
-          <div className="reveal">
-            <div className="kicker">
-              <span className="dot" aria-hidden="true"></span> Healthcare Software Engineer • MS CS @
-              USC
+        <div className="container hero-redesign-grid">
+          <div className="hero-copy reveal">
+            <div className="availability"><span aria-hidden="true" /> Los Angeles · Open to 2027 software engineering roles</div>
+            <p className="hero-role">Backend &amp; AI Engineer</p>
+            <h1>Building reliable software for <span className="accent">high-stakes systems.</span></h1>
+            <p className="hero-deck">I design backend platforms, data pipelines, and agentic AI systems for healthcare—grounded in two years at Oracle Health and current work at Keck Medicine of USC.</p>
+            <div className="cta-row hero-actions">
+              <Link className="btn primary" to="/projects">View selected work <span aria-hidden="true">↗</span></Link>
+              <a className="btn" href="/assets/Roshan_Dharan_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
             </div>
-            <h1 style={{ marginTop: '18px' }}>
-              Roshan Dharan <span className="accent">Shashidharan</span>
-            </h1>
-            <p className="lead">I build backend systems and multi-agent AI pipelines.</p>
-            <div className="hero-meta">
-              <span className="status-dot" aria-hidden="true"></span>Los Angeles, CA — Technical Lead, Keck Medicine
-              of USC
-            </div>
-
-            <p className="hero-summary">
-              Currently pursuing my MS in Computer Science at USC while interning at Keck Medicine of USC, building
-              CCL/Java clinical workflows on Cerner Millennium EHR. Previously spent 2+ years at Oracle Health,
-              engineering data pipelines that processed 600,000+ patient records daily across 17 hospital
-              departments.
-            </p>
-
-            <div className="building-list" aria-label="What I'm building right now">
-              <div className="building-label">What I&rsquo;m building right now</div>
-              <ul>
-                <li>
-                  <b>Multi-agent clinical workflow system</b> <span className="stack">(LangGraph + FastAPI)</span> —
-                  three specialized agents coordinating triage, discharge, and escalation via stateful graph
-                  execution.
-                </li>
-                <li>
-                  <b>RAG codebase Q&amp;A agent</b> <span className="stack">(LangChain + ChromaDB)</span> — ingest any
-                  GitHub repo, ask natural-language questions, get cited answers.
-                </li>
-                <li>
-                  <b>Distributed task queue from primitives</b>{' '}
-                  <span className="stack">(Redis + PostgreSQL + Kubernetes)</span> — priority queues, exponential
-                  backoff, dead-letter queue, no Celery.
-                </li>
-              </ul>
-            </div>
-
-            <div className="cta-row">
-              <Link className="btn primary" to="/resume">
-                View Resume
-              </Link>
-            </div>
-            <div className="link-row">
-              <a href="https://www.linkedin.com/in/roshan-dharan" target="_blank" rel="noopener">
-                LinkedIn
-              </a>
-              <a href="https://github.com/Roshandharan" target="_blank" rel="noopener">
-                GitHub
-              </a>
-              <CopyEmailButton id="copyEmail" email={EMAIL}>
-                Copy Email
-              </CopyEmailButton>
+            <div className="hero-links" aria-label="Contact links">
+              <a href="https://github.com/Roshandharan" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/roshan-dharan" target="_blank" rel="noopener">LinkedIn</a>
+              <CopyEmailButton id="copyEmail" email={EMAIL}>Copy email</CopyEmailButton>
             </div>
           </div>
-
-          <aside className="hero-card reveal" aria-label="Profile summary">
-            <div className="profile">
-              <div className="profile-img">
-                <img src="/assets/profile.webp" alt="Profile photo placeholder" loading="lazy" />
-              </div>
-              <div className="profile-stats">
-                <StatCounter target={3} label="Industry roles" />
-                <StatCounter target={12} label="Projects & builds" />
-                <StatCounter target={5} label="Awards" />
-                <StatCounter target={2} label="Certifications" />
-              </div>
-            </div>
+          <aside className="profile-panel reveal" aria-label="Roshan Dharan profile">
+            <div className="portrait-wrap"><img src="/assets/profile.webp" alt="Roshan Dharan" /></div>
+            <div className="profile-panel-copy"><strong>Roshan Dharan</strong><span>MS Computer Science · USC</span><span>Software Engineer Intern · Keck Medicine</span></div>
           </aside>
         </div>
       </section>
 
-      <section className="highlights-band" aria-label="Highlights">
-        <div className="container">
-          <div className="highlights-row">
-            <span className="pill">Healthcare AI</span>
-            <span className="pill">Oracle Health</span>
-            <span className="pill">USC MS CS</span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/python.svg" alt="" loading="lazy" />
-              Python
-            </span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/java.svg" alt="" loading="lazy" />
-              Java
-            </span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/postgresql.svg" alt="" loading="lazy" />
-              SQL
-            </span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/aws.svg" alt="" loading="lazy" />
-              AWS
-            </span>
-            <span className="pill">Databricks</span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/fastapi.svg" alt="" loading="lazy" />
-              FastAPI
-            </span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/langgraph.svg" alt="" loading="lazy" />
-              LangGraph
-            </span>
-            <span className="pill">LangChain</span>
-            <span className="pill">Claude / LLMs</span>
-            <span className="pill">Redis</span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/kubernetes.svg" alt="" loading="lazy" />
-              Kubernetes
-            </span>
-            <span className="pill">
-              <img className="pill-icon" src="/assets/skills/docker.svg" alt="" loading="lazy" />
-              Docker
-            </span>
-            <span className="pill">12 Projects</span>
-            <span className="pill">5 Awards</span>
-            <span className="pill">3.67 GPA</span>
-          </div>
+      <section className="proof-strip" aria-label="Selected impact">
+        <div className="container proof-grid">
+          <div><strong>600K+</strong><span>patient records processed daily</span></div>
+          <div><strong>30–40%</strong><span>report runtime improvement</span></div>
+          <div><strong>17</strong><span>hospital departments supported</span></div>
+          <div><strong>2+ years</strong><span>enterprise healthcare engineering</span></div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-head reveal">
-            <div>
-              <h2>Education</h2>
-              <p>Academic background with a focus on data science, large-scale systems, and applied engineering.</p>
+      <section className="section selected-work"><div className="container">
+        <div className="section-head reveal"><div><span className="section-index">01 · Selected work</span><h2>Systems, not demos.</h2><p>Projects built around retrieval quality, observable decisions, and production-minded safeguards.</p></div><Link className="text-link" to="/projects">Explore all projects <span aria-hidden="true">→</span></Link></div>
+        <div className="case-study-list">
+          {selectedWork.map((project, index) => <article className="case-study reveal" key={project.title}>
+            <div className="case-study-media"><img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'} /></div>
+            <div className="case-study-copy"><span className="eyebrow">{project.eyebrow}</span><h3>{project.title}</h3><p>{project.summary}</p>
+              <div className="case-study-facts"><span><b>Result</b>{project.metric}</span><span><b>Stack</b>{project.stack}</span></div>
+              {project.internal ? <Link className="text-link" to={project.href}>View case study <span aria-hidden="true">→</span></Link> : <a className="text-link" href={project.href} target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>}
             </div>
-            <Link className="btn" to="/resume">
-              Open Resume PDF
-            </Link>
-          </div>
-
-          <div className="grid grid-2">
-            <article className="card reveal">
-              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
-                <div className="media logo">
-                  <img src="/assets/usc.svg" alt="University of Southern California logo" loading="lazy" />
-                </div>
-                <div>
-                  <h3>University of Southern California</h3>
-                  <div className="meta">
-                    Master of Science in Computer Science • GPA: 3.67/4 • Aug 2025 – May 2027 • Los
-                    Angeles, CA
-                  </div>
-                </div>
-              </div>
-              <p>
-                Graduate study in data science, large-scale data systems, and applied machine learning with a focus
-                on healthcare technology and cloud-native analytics.
-              </p>
-            </article>
-
-            <article className="card reveal">
-              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
-                <div className="media logo">
-                  <img src="/assets/reva.svg" alt="REVA University logo" loading="lazy" />
-                </div>
-                <div>
-                  <h3>REVA University</h3>
-                  <div className="meta">Bachelor of Technology in Computer Science and Engineering • Jul 2019 – Jul 2023</div>
-                </div>
-              </div>
-              <p>
-                GPA: 3.97/4. Coursework: Data Structures and Algorithms, Object-Oriented Programming
-                (Python/Java/C++), Advanced DBMS, Operating Systems, Machine Learning, Artificial Intelligence, Cloud
-                Computing, Big Data, and Data Science with R.
-              </p>
-            </article>
-          </div>
+          </article>)}
         </div>
-      </section>
+      </div></section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-head reveal">
-            <div>
-              <h2>Technical Skills</h2>
-              <p>Languages, frameworks, and infrastructure across backend systems, cloud platforms, and applied ML.</p>
-            </div>
-          </div>
-
-          <div className="skills-list reveal">
-            <div className="skills-row">
-              <div className="skills-label">Languages</div>
-              <div className="skills-tags">
-                <span className="tag">Python</span>
-                <span className="tag">Java</span>
-                <span className="tag">C++</span>
-                <span className="tag">JavaScript</span>
-                <span className="tag">TypeScript</span>
-                <span className="tag">SQL (PostgreSQL, CCL)</span>
-                <span className="tag">HTML/CSS</span>
-                <span className="tag">MATLAB</span>
-              </div>
-            </div>
-            <div className="skills-row">
-              <div className="skills-label">Backend &amp; Frameworks</div>
-              <div className="skills-tags">
-                <span className="tag">Spring Boot</span>
-                <span className="tag">FastAPI</span>
-                <span className="tag">REST API Design</span>
-                <span className="tag">Node.js</span>
-                <span className="tag">Distributed Systems</span>
-                <span className="tag">Mockito</span>
-              </div>
-            </div>
-            <div className="skills-row">
-              <div className="skills-label">DevOps &amp; Tools</div>
-              <div className="skills-tags">
-                <span className="tag">Docker</span>
-                <span className="tag">Kubernetes</span>
-                <span className="tag">CI/CD (GitHub Actions)</span>
-                <span className="tag">Git</span>
-                <span className="tag">Version Control</span>
-                <span className="tag">Linux</span>
-                <span className="tag">Agile/Scrum</span>
-                <span className="tag">JIRA</span>
-              </div>
-            </div>
-            <div className="skills-row">
-              <div className="skills-label">Cloud &amp; Databases</div>
-              <div className="skills-tags">
-                <span className="tag">AWS (S3, EC2, Lambda)</span>
-                <span className="tag">GCP</span>
-                <span className="tag">OCI</span>
-                <span className="tag">Snowflake</span>
-                <span className="tag">PostgreSQL</span>
-                <span className="tag">MongoDB</span>
-                <span className="tag">Redis</span>
-              </div>
-            </div>
-            <div className="skills-row">
-              <div className="skills-label">ML &amp; AI</div>
-              <div className="skills-tags">
-                <span className="tag">TensorFlow</span>
-                <span className="tag">Keras</span>
-                <span className="tag">PyTorch</span>
-                <span className="tag">Sklearn</span>
-                <span className="tag">XGBoost</span>
-                <span className="tag">LangGraph</span>
-                <span className="tag">LSTM</span>
-                <span className="tag">Transformers (BioClinicalBERT)</span>
-                <span className="tag">NLP</span>
-              </div>
-            </div>
-          </div>
+      <section className="section experience-snapshot"><div className="container">
+        <div className="section-head reveal"><div><span className="section-index">02 · Experience</span><h2>Healthcare depth. Software discipline.</h2></div><Link className="text-link" to="/experience">Full experience <span aria-hidden="true">→</span></Link></div>
+        <div className="role-list reveal">
+          <article><div className="role-date">2025 — Present</div><div><h3>Keck Medicine of USC</h3><p>Software Engineer Intern · Clinical applications and healthcare AI</p></div><img src="/assets/keck.svg" alt="" loading="lazy" /></article>
+          <article><div className="role-date">2023 — 2025</div><div><h3>Oracle Health</h3><p>Associate Software Engineer · Backend reporting and data pipelines</p></div><img src="/assets/oracle.png" alt="" loading="lazy" /></article>
+          <article><div className="role-date">2023</div><div><h3>Oracle Cerner</h3><p>Software Engineering Intern · Automation and cloud analytics</p></div><img src="/assets/cerner.png" alt="" loading="lazy" /></article>
         </div>
-      </section>
+      </div></section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-head reveal">
-            <div>
-              <h2>Highlights</h2>
-              <p>Representative work spanning healthcare analytics, enterprise reporting, and applied machine learning.</p>
-            </div>
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <Link className="btn" to="/projects">
-                Browse projects
-              </Link>
-              <Link className="btn" to="/publications">
-                Publications
-              </Link>
-            </div>
-          </div>
+      <section className="section focus-section"><div className="container focus-grid">
+        <div className="reveal"><span className="section-index">03 · Right now</span><h2>Learning, experimenting, refining.</h2><p>At USC, I’m deepening the theory behind language systems and secure software while exploring the next generation of agentic pipelines with Google’s Agent Development Kit.</p></div>
+        <div className="focus-list reveal"><div><span>Course</span><strong>CSCI 544</strong><p>Applied Natural Language Processing</p></div><div><span>Course</span><strong>CSCI 530</strong><p>Security Systems</p></div><div><span>Exploration</span><strong>Google ADK</strong><p>Reliable orchestration, tool use, and agent evaluation</p></div></div>
+      </div></section>
 
-          <div className="grid">
-            <article className="card reveal">
-              <h3>AI Agents &amp; Automation</h3>
-              <p>
-                End-to-end agentic systems built from scratch — retrieval, orchestration, and LLM synthesis, not
-                wrappers around a hosted product.
-              </p>
-              <ul>
-                <li>
-                  RAG-powered codebase Q&amp;A agent with language-aware chunking, MMR retrieval, and
-                  citation-grounded answers over any public GitHub repo.
-                </li>
-                <li>
-                  Hospital AI Command Center: an 8-node LangGraph pipeline that scores clinical risk and drafts
-                  intervention plans in real time on every ADT event.
-                </li>
-              </ul>
-              <div className="cta-row" style={{ marginTop: '12px' }}>
-                <Link className="btn primary" to="/projects">
-                  See both projects
-                </Link>
-              </div>
-            </article>
+      <section className="section toolkit-section"><div className="container toolkit-grid reveal"><div><span className="section-index">04 · Toolkit</span><h2>Built across the stack.</h2></div><div className="toolkit-groups"><p><b>Backend</b><span>Python · Java · FastAPI · Spring Boot · REST APIs</span></p><p><b>Data</b><span>PostgreSQL · Snowflake · Redis · MongoDB · CCL</span></p><p><b>AI / ML</b><span>PyTorch · LangGraph · LangChain · XGBoost · Transformers</span></p><p><b>Infrastructure</b><span>AWS · GCP · Docker · Kubernetes · GitHub Actions</span></p></div></div></section>
 
-            <article className="card reveal">
-              <h3>Healthcare Software - Engineering Impact</h3>
-              <p>
-                Delivered measurable improvements to reporting performance and operational efficiency in enterprise
-                healthcare environments.
-              </p>
-              <ul>
-                <li>
-                  Led advanced analytics initiatives at Children&rsquo;s National Hospital across 17+ departments,
-                  cutting report runtimes by 30–40%.
-                </li>
-                <li>
-                  Designed SQL and ETL pipelines processing 600,000+ patient records/day, shaping $200M+
-                  revenue-impacting decisions.
-                </li>
-                <li>
-                  Built compliant 340B, HIDI, and CLABSI audit solutions, reclaiming 114+ hours/year and reducing
-                  pharmacy drug spend by over $12M annually.
-                </li>
-              </ul>
-            </article>
-
-            <article className="card reveal">
-              <h3>Others</h3>
-              <p>Built and deployed end-to-end ML workflows for clinical and engineering use cases.</p>
-              <ul>
-                <li>
-                  Multimodal ICU outcome prediction using LSTM vitals and BioClinicalBERT embeddings with 6–8% AUROC
-                  lift over NLP-only baselines.
-                </li>
-                <li>
-                  EV battery SoC/SoH prediction over 5,000+ charging cycles using deep learning, with a peer-reviewed
-                  journal publication.
-                </li>
-                <li>Deployed models as REST services with CI/CD integration for reproducibility and experimentation.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-head reveal">
-            <div>
-              <h2>Quick links</h2>
-              <p>Jump directly into the most relevant artifacts: experience narrative, project case studies, and awards.</p>
-            </div>
-          </div>
-
-          <div className="grid">
-            <article className="card reveal">
-              <h3>Experience</h3>
-              <p>Role-by-role impact with quantified outcomes in enterprise healthcare environments.</p>
-              <div className="cta-row">
-                <Link className="btn primary" to="/experience">
-                  View experience
-                </Link>
-                <Link className="btn" to="/awards">
-                  Awards
-                </Link>
-              </div>
-            </article>
-
-            <article className="card reveal">
-              <h3>Projects</h3>
-              <p>Filter and search across personal work, healthcare reporting builds, and analytics initiatives.</p>
-              <div className="cta-row">
-                <Link className="btn primary" to="/projects">
-                  Explore projects
-                </Link>
-                <Link className="btn" to="/publications">
-                  Publication
-                </Link>
-              </div>
-            </article>
-
-            <article className="card reveal">
-              <h3>Resume</h3>
-              <p>Embedded PDF view for quick review and easy download.</p>
-              <div className="cta-row">
-                <Link className="btn primary" to="/resume">
-                  Open resume
-                </Link>
-                <a className="btn" href="https://www.linkedin.com/in/roshan-dharan" target="_blank" rel="noopener">
-                  Contact
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section closing-cta">
-        <div className="container">
-          <div className="closing-cta-inner reveal">
-            <div>
-              <h2>Open to Software Engineering roles</h2>
-              <p>
-                Healthcare AI, backend systems, and agentic infrastructure. If any of that overlaps with what
-                you&rsquo;re building, I&rsquo;d like to hear about it.
-              </p>
-            </div>
-            <div className="cta-row">
-              <Link className="btn primary" to="/resume">
-                View Resume
-              </Link>
-              <a className="btn" href="https://www.linkedin.com/in/roshan-dharan" target="_blank" rel="noopener">
-                LinkedIn
-              </a>
-              <CopyEmailButton id="copyEmailFooter" className="btn" email={EMAIL}>
-                Copy Email
-              </CopyEmailButton>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="section closing-cta"><div className="container"><div className="closing-cta-inner reveal"><div><span className="section-index">Let’s build something useful</span><h2>Looking for a backend or AI engineer?</h2><p>I’m interested in teams solving difficult infrastructure, healthcare, and applied AI problems.</p></div><div className="cta-row"><CopyEmailButton id="copyEmailFooter" className="btn primary" email={EMAIL}>Copy email</CopyEmailButton><Link className="btn" to="/resume">View resume</Link></div></div></div></section>
     </>
   );
 }

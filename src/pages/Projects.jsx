@@ -47,7 +47,7 @@ export default function Projects() {
     <>
       <Seo
         title="Projects | Roshan Dharan"
-        description="Projects portfolio — filtering and search enabled."
+        description="Backend, agentic AI, healthcare, and machine-learning case studies by Roshan Dharan."
         path="/projects"
         ogImage="/assets/og-projects.png"
       />
@@ -56,8 +56,9 @@ export default function Projects() {
         <div className="container">
           <div className="section-head reveal">
             <div>
-              <h2>Projects</h2>
-              <p>Search, filter, and sort across personal builds, enterprise healthcare reporting, and analytics deliverables.</p>
+              <span className="section-index">Engineering portfolio</span>
+              <h2>Projects built to answer hard questions.</h2>
+              <p>Agentic systems, clinical machine learning, and enterprise healthcare infrastructure—with architecture, decisions, and measurable outcomes.</p>
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
               <span className="meta" id="projectCount" aria-live="polite">
