@@ -62,7 +62,7 @@ export default function Home() {
       <section className="section experience-snapshot"><div className="container">
         <div className="section-head reveal"><div><span className="section-index">02 · Experience</span><h2>Healthcare depth. Software discipline.</h2></div><Link className="text-link" to="/experience">Full experience <span aria-hidden="true">→</span></Link></div>
         <div className="role-list reveal">
-          <article><div className="role-date">2025 — Present</div><div><h3>Keck Medicine of USC</h3><p>Software Engineer Intern · Clinical applications and healthcare AI</p></div><img src="/assets/keck.svg" alt="" loading="lazy" /></article>
+          <article><div className="role-date">2025 — Present</div><div><h3>Keck Medicine of USC</h3><p>Software Engineer Intern · Clinical applications and healthcare AI</p></div><img src="/assets/keck.png" alt="" loading="lazy" /></article>
           <article><div className="role-date">2023 — 2025</div><div><h3>Oracle Health</h3><p>Associate Software Engineer · Backend reporting and data pipelines</p></div><img src="/assets/oracle.png" alt="" loading="lazy" /></article>
           <article><div className="role-date">2023</div><div><h3>Oracle Cerner</h3><p>Software Engineering Intern · Automation and cloud analytics</p></div><img src="/assets/cerner.png" alt="" loading="lazy" /></article>
         </div>

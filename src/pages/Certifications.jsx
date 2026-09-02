@@ -29,7 +29,7 @@ export default function Certifications() {
 
           <div className="grid grid-2">
             <article className="card reveal">
-              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+              <div className="logo-heading">
                 <div className="media logo">
                   <img src="/assets/itil.svg" alt="ITIL® Foundation logo" loading="lazy" />
                 </div>
@@ -45,7 +45,7 @@ export default function Certifications() {
             </article>
 
             <article className="card reveal">
-              <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+              <div className="logo-heading">
                 <div className="media logo">
                   <img src="/assets/cerner.png" alt="Cerner Learning Services logo" loading="lazy" />
                 </div>
