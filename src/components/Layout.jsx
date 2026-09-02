@@ -5,6 +5,7 @@ import useRevealOnScroll from '../hooks/useRevealOnScroll.js';
 import { useModal } from '../context/modalContext.js';
 import { useToast } from '../context/toastContext.js';
 import { NAV_LINKS, FOOTER_LABELS } from '../data/nav.js';
+import FlowLines from './FlowLines.jsx';
 
 export default function Layout() {
   const location = useLocation();
@@ -74,6 +75,7 @@ export default function Layout() {
 
   return (
     <>
+      <FlowLines className="site-dna-background" />
       <a className="skip-link" href="#content">
         Skip to content
       </a>
@@ -149,7 +151,7 @@ export default function Layout() {
             </button>
           </header>
           <div className="body">
-            <img id="modalImg" src={modal?.src || ''} alt={modal?.title || ''} />
+            {modal?.src ? <img id="modalImg" src={modal.src} alt={modal.title || ''} /> : null}
             <p id="modalDesc" style={{ marginTop: '10px' }}>
               {modal?.desc || ''}
             </p>

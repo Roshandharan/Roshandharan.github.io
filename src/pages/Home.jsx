@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import CopyEmailButton from '../components/CopyEmailButton.jsx';
-import FlowLines from '../components/FlowLines.jsx';
 
 const EMAIL = 'roshandharan.shashidharan@usc.edu';
 const selectedWork = [
   { eyebrow: 'Agentic healthcare systems', title: 'Hospital AI Command Center', image: '/assets/hospital-command-project.svg', alt: 'Hospital AI Command Center interface and system overview', summary: 'A real-time multi-agent workflow that reacts to HL7 ADT events, scores clinical risk, retrieves guidelines, and produces attributable intervention plans.', metric: '5 models · 0.77–0.83 AUC', stack: 'LangGraph · XGBoost · Claude · FastAPI', href: 'https://github.com/Roshandharan/hospital-ai-command-center' },
   { eyebrow: 'Retrieval and developer tooling', title: 'RAG Codebase Q&A Agent', image: '/assets/rag-agent-project.svg', alt: 'RAG Codebase Q and A agent interface', summary: 'Ingests a public GitHub repository and answers natural-language questions with citations to the exact source chunks used for retrieval.', metric: '90% hit-rate@k', stack: 'LangChain · ChromaDB · Python', href: 'https://github.com/Roshandharan/rag-codebase-agent' },
-  { eyebrow: 'Clinical machine learning', title: 'ICU Outcome Prediction', image: '/assets/icu-project-cover.svg', alt: 'ICU outcome prediction project overview', summary: 'A multimodal prediction pipeline combining longitudinal vitals with BioClinicalBERT representations of clinical notes.', metric: '6–8% AUROC lift', stack: 'PyTorch · BioClinicalBERT · Streamlit', href: '/projects', internal: true },
 ];
 
 export default function Home() {
@@ -16,13 +14,12 @@ export default function Home() {
       <Seo title="Roshan Dharan | Backend & AI Engineer" description="Backend and AI engineer building reliable healthcare systems. USC MS CS, Keck Medicine of USC, and former Oracle Health engineer." path="/" />
 
       <section className="hero hero-redesign">
-        <FlowLines className="hero-flow" />
         <div className="container hero-redesign-grid">
           <div className="hero-copy reveal">
             <div className="availability"><span aria-hidden="true" /> Los Angeles · Open to 2027 software engineering roles</div>
             <p className="hero-role">Backend &amp; AI Engineer</p>
             <h1>Building reliable software for <span className="accent">high-stakes systems.</span></h1>
-            <p className="hero-deck">I design backend platforms, data pipelines, and agentic AI systems for healthcare—grounded in two years at Oracle Health and current work at Keck Medicine of USC.</p>
+            <p className="hero-deck">I build production backend and AI systems for healthcare—processing 600K records a day, improving clinical operations, and turning complex infrastructure into measurable outcomes.</p>
             <div className="cta-row hero-actions">
               <Link className="btn primary" to="/projects">View selected work <span aria-hidden="true">↗</span></Link>
               <a className="btn" href="/assets/Roshan_Dharan_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
@@ -42,10 +39,10 @@ export default function Home() {
 
       <section className="proof-strip" aria-label="Selected impact">
         <div className="container proof-grid">
-          <div><strong>600K+</strong><span>patient records processed daily</span></div>
-          <div><strong>30–40%</strong><span>report runtime improvement</span></div>
-          <div><strong>17</strong><span>hospital departments supported</span></div>
-          <div><strong>2+ years</strong><span>enterprise healthcare engineering</span></div>
+          <div><strong>600K</strong><span>records processed daily</span></div>
+          <div><strong>$200M</strong><span>in decisions informed</span></div>
+          <div><strong>$12M</strong><span>operating cost reduction</span></div>
+          <div><strong>$1M+</strong><span>projected annual savings</span></div>
         </div>
       </section>
 
@@ -56,7 +53,7 @@ export default function Home() {
             <div className="case-study-media"><img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'} /></div>
             <div className="case-study-copy"><span className="eyebrow">{project.eyebrow}</span><h3>{project.title}</h3><p>{project.summary}</p>
               <div className="case-study-facts"><span><b>Result</b>{project.metric}</span><span><b>Stack</b>{project.stack}</span></div>
-              {project.internal ? <Link className="text-link" to={project.href}>View case study <span aria-hidden="true">→</span></Link> : <a className="text-link" href={project.href} target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>}
+              <a className="text-link" href={project.href} target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
             </div>
           </article>)}
         </div>

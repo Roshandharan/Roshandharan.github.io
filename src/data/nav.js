@@ -2,6 +2,7 @@ export const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/experience', label: 'Experience' },
   { to: '/projects', label: 'Projects' },
+  { to: '/awards', label: 'Awards' },
   { to: '/resume', label: 'Resume' },
 ];
 
