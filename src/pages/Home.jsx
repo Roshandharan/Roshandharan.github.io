@@ -31,7 +31,7 @@ export default function Home() {
             </div>
           </div>
           <aside className="profile-panel reveal" aria-label="Roshan Dharan profile">
-            <div className="portrait-wrap"><img src="/assets/profile.webp" alt="Roshan Dharan" /></div>
+            <div className="portrait-wrap"><img src="/assets/profile.webp" alt="Roshan Dharan" width="900" height="872" decoding="async" fetchPriority="high" /></div>
             <div className="profile-panel-copy"><strong>Roshan Dharan</strong><span>MS Computer Science · USC</span><span>Software Engineer Intern · Keck Medicine</span></div>
           </aside>
         </div>
@@ -70,7 +70,11 @@ export default function Home() {
 
       <section className="section focus-section"><div className="container focus-grid">
         <div className="reveal"><span className="section-index">03 · Right now</span><h2>Learning, experimenting, refining.</h2><p>At USC, I’m deepening the theory behind language systems and secure software while exploring the next generation of agentic pipelines with Google’s Agent Development Kit.</p></div>
-        <div className="focus-list reveal"><div><span>Course</span><strong>CSCI 544</strong><p>Applied Natural Language Processing</p></div><div><span>Course</span><strong>CSCI 530</strong><p>Security Systems</p></div><div><span>Exploration</span><strong>Google ADK</strong><p>Reliable orchestration, tool use, and agent evaluation</p></div></div>
+        <div className="focus-list reveal">
+          <div className="focus-item"><span>Build · 01</span><strong>CSCI 544</strong><p>Building a language model on USC AI GPU infrastructure.</p></div>
+          <div className="focus-item"><span>Research · 02</span><strong>CSCI 530</strong><p>Writing a research paper in secure systems and applied security.</p></div>
+          <div className="focus-item"><span>Explore · 03</span><strong>Google ADK</strong><p>Designing and evaluating tool-using multi-agent workflows with Google’s Agent Development Kit.</p></div>
+        </div>
       </div></section>
 
       <section className="section toolkit-section"><div className="container toolkit-grid reveal"><div><span className="section-index">04 · Toolkit</span><h2>Built across the stack.</h2></div><div className="toolkit-groups"><p><b>Backend</b><span>Python · Java · FastAPI · Spring Boot · REST APIs</span></p><p><b>Data</b><span>PostgreSQL · Snowflake · Redis · MongoDB · CCL</span></p><p><b>AI / ML</b><span>PyTorch · LangGraph · LangChain · XGBoost · Transformers</span></p><p><b>Infrastructure</b><span>AWS · GCP · Docker · Kubernetes · GitHub Actions</span></p></div></div></section>
