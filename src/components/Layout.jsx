@@ -173,6 +173,9 @@ export default function Layout() {
           >
             <div>© 2026 Roshan Dharan. {footerLabel}.</div>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Link to="/publications">Publications</Link>
+              <Link to="/certifications">Certifications</Link>
+              <Link to="/awards">Awards</Link>
               <a className="btn" href="https://www.linkedin.com/in/roshan-dharan" target="_blank" rel="noopener">
                 LinkedIn
               </a>

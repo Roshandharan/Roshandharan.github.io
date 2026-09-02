@@ -4,40 +4,32 @@ export default function ProjectCard({ project }) {
   const { title, meta, desc, bullets, cover, diagram, links, featured } = project;
 
   return (
-    <article
-      className={`card reveal${featured ? ' card-glow' : ''}`}
-      style={featured ? { gridColumn: '1 / -1' } : undefined}
-    >
+    <article className={`card project-card reveal${featured ? ' project-card-featured' : ''}`}>
       <LightboxButton
         className="media project"
-        style={featured ? { maxWidth: '400px', float: 'left', margin: '0 24px 16px 0' } : undefined}
         title={title}
         desc={meta}
         src={cover}
         imgAlt={`${title} cover`}
         ariaLabel={`Open preview for ${title}`}
       />
-      {featured && <div className="tag-featured">Featured</div>}
-      <h3>{title}</h3>
-      <div className="meta">{meta}</div>
-      <p style={{ marginTop: '10px' }}>{desc}</p>
-      <ul>
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
+      <div className="project-card-copy">
+        {featured && <div className="tag-featured">Featured case study</div>}
+        <h3>{title}</h3>
+        <div className="meta">{meta}</div>
+        <p>{desc}</p>
+        <ul>
+          {bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+        </ul>
+        {links && links.length > 0 && (
+          <div className="cta-row">
+            {links.map((link) => <a key={link.href} className={link.label === 'Live demo' ? 'btn primary' : 'btn'} href={link.href} target="_blank" rel="noopener">{link.label}</a>)}
+          </div>
+        )}
+      </div>
       {diagram && (
-        <div className="diagram">
+        <div className="diagram project-diagram">
           <img src={diagram.src} alt={diagram.alt} loading="lazy" />
-        </div>
-      )}
-      {links && links.length > 0 && (
-        <div className="cta-row" style={{ marginTop: '12px' }}>
-          {links.map((link) => (
-            <a key={link.href} className="btn" href={link.href} target="_blank" rel="noopener">
-              {link.label}
-            </a>
-          ))}
         </div>
       )}
     </article>

@@ -43,20 +43,16 @@ export default function Experience() {
               </div>
               <ul>
                 <li>
-                  Serve as Technical Lead for a 6-person Tiger Team, architecting a multi-layer predictive no-show
-                  system — a Snowflake data platform, two versioned XGBoost models, and a Keck Care API integration —
-                  surfacing real-time risk scores across tens of thousands of monthly appointments in Cerner
-                  RevCycle.
+                  Contribute to a Tiger Team developing a predictive no-show workflow spanning Snowflake data,
+                  versioned XGBoost models, and Keck Care API integration for Cerner RevCycle.
                 </li>
                 <li>
-                  Fine-tuned a transformer-based summarization model (LoRA on a T5/BART backbone) in Keck&rsquo;s AI
-                  sandbox to auto-generate discharge summaries, then engineered a Python/LaTeX QA pipeline catching
-                  errors across 2,000+ responses, cutting clinician correction time by an estimated 30%.
+                  Evaluated transformer-based summarization approaches in Keck&rsquo;s AI sandbox and engineered a
+                  Python/LaTeX quality-assurance pipeline to identify errors across 2,000+ generated responses.
                 </li>
                 <li>
-                  Shipped a backend service ingesting Cerner ADT data to track real-time bed capacity across units,
-                  layering a lightweight predictive classifier to flag capacity strain hours in advance, presented as
-                  a technical workshop at a Spring 2026 hackathon.
+                  Developed and presented a Cerner-focused capacity-management prototype for a Spring 2026
+                  hackathon workshop, exploring bed availability, discharge flow, and staffing constraints.
                 </li>
               </ul>
             </article>
