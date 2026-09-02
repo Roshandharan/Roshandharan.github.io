@@ -848,7 +848,7 @@ button.media:focus{ outline:none; box-shadow: var(--focus); }
 .site-dna-background{ position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .site-dna-background img{ position: absolute; display: block; object-fit: contain; user-select: none; }
 .site-dna-primary{
-  width: min(76vw,980px); height: 142vh; right: -7vw; top: -21vh;
+  width: min(76vw,980px); height: 142vh; right: 1vw; top: -21vh;
   opacity: .34; filter: saturate(.72) contrast(.9) brightness(1.03) drop-shadow(0 0 34px rgba(61,132,205,.16));
   backface-visibility: hidden;
   will-change: transform;
@@ -875,7 +875,7 @@ nav,main,footer{ position: relative; z-index: 1; }
 [data-theme="dark"] .site-dna-primary{ opacity: .44; filter: saturate(.78) contrast(.94) brightness(1.04) drop-shadow(0 0 40px rgba(86,154,225,.22)); }
 [data-theme="dark"] .site-dna-echo{ opacity: .1; }
 @media (max-width: 760px){
-  .site-dna-primary{ width: 118vw; height: 132vh; right: -39vw; top: -13vh; opacity: .28; }
+  .site-dna-primary{ width: 118vw; height: 132vh; right: -31vw; top: -13vh; opacity: .28; }
   .site-dna-echo{ width: 84vw; left: -42vw; opacity: .045; }
 }
 @media (prefers-reduced-motion: reduce){
